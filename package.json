@@ -1,35 +1,11 @@
 {
-  "name": "@mytbserver/tv-tbserver-tizenbrew",
+  "name": "tv-tbserver",
   "version": "1.0.0",
   "description": "TV.TBSERVER app for TizenBrew",
-  "private": false,
   "packageType": "app",
   "appName": "TV.TBSERVER",
-  "appPath": "app/index.html",
+  "appPath": "index.html",
   "serviceFile": "service.js",
-  "evaluateScriptOnDocumentStart": false,
-  "keys": [
-    "ArrowLeft",
-    "ArrowRight",
-    "ArrowUp",
-    "ArrowDown",
-    "Enter",
-    "Back",
-    "MediaPlay",
-    "MediaPause",
-    "MediaPlayPause",
-    "MediaStop",
-    "ChannelUp",
-    "ChannelDown",
-    "ColorF0Red",
-    "ColorF1Green",
-    "ColorF2Yellow",
-    "ColorF3Blue"
-  ],
-  "files": [
-    "app/**/*",
-    "service.js",
-    "README.md"
-  ],
-  "license": "UNLICENSED"
+  "keys": ["MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop"],
+  "evaluateScriptOnDocumentStart": false
 }
