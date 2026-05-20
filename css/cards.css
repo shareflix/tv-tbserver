@@ -1,0 +1,367 @@
+/* CONTENT */
+
+.content-section {
+  margin-top: 0;
+}
+
+.section-header {
+  margin-bottom: 14px;
+}
+
+.section-header h2 {
+  font-size: 0;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+#content > .home-sections {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.home-sections,
+.home-row {
+  width: 100%;
+}
+
+.home-row {
+  margin-bottom: 22px;
+}
+
+.home-section-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.row-title {
+  font-size: 17px;
+  margin: 0;
+  font-weight: 900;
+}
+
+.view-all-btn {
+  border: none;
+  border-radius: 11px;
+  padding: 9px 13px;
+  background: rgba(255,255,255,.08);
+  color: #dce5ff;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.home-categories {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.home-categories .card {
+  min-height: 92px;
+  padding: 15px 18px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at top left, rgba(47,113,255,.28), transparent 42%),
+    linear-gradient(135deg, rgba(22,35,70,.96), rgba(8,12,24,.96));
+}
+
+.home-categories .card-image-wrap,
+.home-categories .card-placeholder {
+  display: none;
+}
+
+.home-categories .card-body {
+  padding: 0;
+}
+
+/* ROWS */
+
+.poster-row {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 2px 12px;
+}
+
+.poster-row .card {
+  flex: 0 0 185px;
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+}
+
+/* CARDS */
+
+.card {
+  background: linear-gradient(180deg, rgba(18,28,52,.98), rgba(8,12,24,.98));
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  transition: .25s ease;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,.22);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 24px 55px rgba(0,0,0,.38);
+  border-color: rgba(77,136,255,.35);
+}
+
+.card-image-wrap {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background: #0e1424;
+  overflow: hidden;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-placeholder {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #14244b, #071020);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-placeholder span {
+  font-size: 38px;
+  font-weight: 900;
+  color: #6ea2ff;
+}
+
+.card-body {
+  padding: 12px 13px 14px;
+}
+
+.card-top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card-badge {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(39,111,255,.18);
+  color: #7fa9ff;
+  font-size: 9px;
+  font-weight: 900;
+  margin-bottom: 7px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.card-subtitle {
+  color: #9eaccf;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.desc-btn {
+  border: 1px solid rgba(90,150,255,.35);
+  background: rgba(37,111,255,.18);
+  color: #bcd3ff;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* CARD DESCRIPTION */
+
+.card-desc-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(4,8,18,.20), rgba(4,8,18,.96));
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, visibility .18s ease;
+}
+
+.card.show-description .card-desc-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.card-desc-title {
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card-desc-text {
+  color: #eaf1ff;
+  font-size: 12px;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-live .card-desc-overlay,
+.card-radio .card-desc-overlay,
+.card-menu .card-desc-overlay,
+.desc-hover-popup,
+.desc-modal,
+.desc-popup {
+  display: none !important;
+}
+
+/* LIVE TV */
+
+#livePreview .card {
+  flex: 0 0 230px;
+  width: 230px;
+  min-width: 230px;
+  max-width: 230px;
+}
+
+#livePreview .card-image-wrap,
+.card-live .card-image-wrap {
+  aspect-ratio: 16 / 9;
+  background: #0b1224;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+#livePreview .card-image-wrap img,
+.card-live .card-image-wrap img {
+  object-fit: contain;
+}
+
+
+/* ============================= */
+/* LIVE TV EPG */
+/* ============================= */
+
+.card-live .card-subtitle {
+  color: #d7e3ff;
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 7px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 48px;
+}
+
+#livePreview .card-subtitle {
+  -webkit-line-clamp: 2;
+  min-height: 34px;
+}
+
+
+/* LIVE TV EPG FAST FIX */
+.card-live .card-subtitle {
+  color: #d7e3ff;
+  white-space: normal;
+}
+
+.card-live .card-subtitle br {
+  display: block;
+}
+
+
+/* LIVE TV DESCRIPTION BUTTON FINAL */
+.card-live .card-top-line {
+  align-items: center;
+}
+
+.card-live .desc-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(90,150,255,.45);
+  background: rgba(37,111,255,.22);
+  color: #dbe8ff;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.card-live .desc-btn:hover {
+  background: rgba(37,111,255,.38);
+}
+
+.card-live .card-subtitle {
+  min-height: 36px;
+}
+
+
+/* HOME LIVE TV EPG TEXT */
+.home-row .card-live .card-subtitle {
+  min-height: 42px;
+  line-height: 1.35;
+  -webkit-line-clamp: 3;
+}
+
+/* HOME LIVE TV EPG FINAL */
+.home-row .card-live .card-subtitle,.card-live .card-subtitle{color:#d7e3ff;min-height:42px;line-height:1.35;white-space:normal;-webkit-line-clamp:3}
+
+
+/* EPG AUTO FINAL - Live TV cards */
+.card-live .card-subtitle {
+  color: #d7e3ff !important;
+  min-height: 42px;
+  line-height: 1.35;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+}
+
+
+/* TVTB STABLE LIVE EPG */
+.card-live .card-subtitle {
+  color: #d7e3ff;
+  line-height: 1.35;
+  min-height: 38px;
+  white-space: normal;
+}
