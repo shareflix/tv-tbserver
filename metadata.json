@@ -1,0 +1,7 @@
+{
+  "name": "TV.TBSERVER",
+  "version": "1.0.0",
+  "description": "TV.TBSERVER app for TizenBrew",
+  "main": "index.html",
+  "icon": "assets/icon.png"
+}
