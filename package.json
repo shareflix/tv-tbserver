@@ -4,7 +4,7 @@
   "description": "TV.TBSERVER app for TizenBrew",
   "packageType": "app",
   "appName": "TV.TBSERVER",
-  "appPath": "index.html",
+  "appPath": "app/index.html",
   "serviceFile": "service.js",
   "keys": ["MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop"],
   "evaluateScriptOnDocumentStart": false
