@@ -1,7 +1,6 @@
 {
   "name": "TV.TBSERVER",
+  "author": "shareflix",
   "version": "1.0.0",
-  "description": "TV.TBSERVER app for TizenBrew",
-  "main": "index.html",
-  "icon": "assets/icon.png"
+  "description": "TV.TBSERVER for Samsung Tizen"
 }
